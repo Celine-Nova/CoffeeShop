@@ -28,4 +28,11 @@ class MainController extends CoreController {
         // dump($list);
         echo 'je retourne les donnees';
     }
+    // TEST
+    // Le model étend du CoreModel il herite de sa methode findAll en déclarant dans le modele la proprité table  ex protected static $table = 'list';
+    // public function getLists()
+    // {
+    //     $lists = ListModel::findAll();
+    //     dump($lists);
+    // }
 }
