@@ -1,12 +1,12 @@
 <?php return array (
   'root' => 
   array (
-    'pretty_version' => '1.0.0+no-version-set',
-    'version' => '1.0.0.0',
+    'pretty_version' => 'dev-main',
+    'version' => 'dev-main',
     'aliases' => 
     array (
     ),
-    'reference' => NULL,
+    'reference' => '4dee8b58c9c17ade1f4b4e612614ff89c5ddc60c',
     'name' => 'cocotte/php_answer_response',
   ),
   'versions' => 
@@ -22,12 +22,12 @@
     ),
     'cocotte/php_answer_response' => 
     array (
-      'pretty_version' => '1.0.0+no-version-set',
-      'version' => '1.0.0.0',
+      'pretty_version' => 'dev-main',
+      'version' => 'dev-main',
       'aliases' => 
       array (
       ),
-      'reference' => NULL,
+      'reference' => '4dee8b58c9c17ade1f4b4e612614ff89c5ddc60c',
     ),
     'symfony/polyfill-mbstring' => 
     array (

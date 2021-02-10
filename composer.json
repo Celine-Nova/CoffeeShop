@@ -10,5 +10,10 @@
     "require": {
         "altorouter/altorouter": "^2.0",
         "symfony/var-dumper": "^5.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "myFramework\\" : "app/"
+        }
     }
 }
