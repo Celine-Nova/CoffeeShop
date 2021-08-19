@@ -151,7 +151,7 @@ h4{
 }
  .footer-container{
     display: flex;
-    border: solid 6px black;
+    /* border: solid 6px black; */
     justify-content: space-around;
     
 } 
