@@ -8,4 +8,4 @@
 - Page Formulaire de modification d'un produit
 - Page Admin - Tableau representant tous les produits - Option : Ajouter, modifier et supprimer un produit
 - - -
-![page admin](public/pictures/markdown/markdown_admin.jpeg "page admin back office")
+![page admin](public/pictures/markdown_admin.jpeg "page admin back office")
