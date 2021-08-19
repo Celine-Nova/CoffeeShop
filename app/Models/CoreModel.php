@@ -1,6 +1,9 @@
 <?php
 
 namespace myFramework\Models;
+
+use DateTime;
+
 class CoreModel {
     
     protected $id;
@@ -9,6 +12,12 @@ class CoreModel {
     protected $created_at;
     protected $updated_at; 
 
+    // public function __construct()
+    // {
+       
+    //     $this->created_at = new DateTime();
+    //     $this->updated_at = new DateTime();
+    // }
 
 
     /**

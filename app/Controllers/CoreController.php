@@ -23,6 +23,7 @@ class CoreController
      */
     protected function show($viewName, $viewVars = [])
     {
+        // $dbData = new DBData();
         // Je fais en sorte que mon router (ici AltoRouter) soit accessible dans mes vues de manière à pouvoir générer les URLs contenues dans mes vues avec la méthode generate d'AltoRouter
         $viewVars['router'] = $this->router;
 

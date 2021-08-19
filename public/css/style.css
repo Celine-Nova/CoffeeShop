@@ -1,0 +1,166 @@
+body{
+    background-color: #fbf2e8;
+}
+main, #main-footer, nav{
+    width: 1024px;
+    margin: 0 auto;
+}
+header, footer{
+    background-color: white;
+}
+#menu-burger-img{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+/* ul{
+    text-align: center;
+    background-color: lightcoral;
+} */
+#logo-maxicoffee {
+    color: white;
+    max-width: 350px;
+    max-height: 150px;
+    margin: 5px;
+    /* padding: 30px; */
+}
+#header-navbar{
+    background-color: #bf935c;
+    padding: 2px;
+    margin-top: 5px;
+}
+#navbar>ul>li{
+   
+    margin: 0 15px;
+    padding: 2px;
+}
+#navbar>ul>li>a{
+    color: white;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+h1{
+    text-align: center;
+}
+a {
+    text-decoration: none;
+}
+#navbar li {
+    list-style-type: none;
+    display: inline-block;
+    margin: 5px;
+}
+/* HOME */
+#container-product{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 15px;
+}
+.product{
+    border: solid 1px brown;
+    background-color: white;
+    width: 200px;
+    margin: 5px;
+    padding: 5px 15px;
+}
+#picture-product{
+    max-width: 200px;
+    max-height: 200px;
+}
+
+/* Formulaire ajout produits */
+#form-product {
+    border: 1px solid #778df3;
+    padding: 2em;
+    margin: 1em auto;
+    font-size: 1.3em;
+    width: 550px;
+}
+
+.form-label{
+    /* display: flex; */
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    /* justify-content: center;
+    margin: 0 auto; */
+
+}
+.form-input{
+  width: 75%;
+   position: relative;
+   left: 3em;
+   margin: 0.5em;
+   /* left:500px; */
+    background-color: rgb(234, 236, 234);
+    border: 1px solid rgb(155, 155, 155);
+ 
+}
+#input-submit{
+    background-color: rgb(28, 165, 28);
+    position: relative;
+    margin-top: 0.7em;
+    left:  17em;
+}
+/* DETAIL PRODUCT */
+.detail-product{
+    margin: 0 auto;
+    padding: 15px;
+}
+/* ADMIN */
+table{
+ 
+  width: 1024px;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+th, td{
+    /* max-width: 300px; */
+    border: 1px solid rgb(20, 19, 19);
+    /* word-break: break-all; */
+    padding: 0 3px;
+}
+.small-td{
+    text-align: center;
+    width: 60px; 
+    /* padding: 0 3px; */
+}
+#picture-product-admin{
+    max-width: 100px;
+    max-height: 75px;
+}
+.action{
+   width: 130px;
+   text-align: center;
+}
+#btn-edit{
+    background-color: yellow;
+}
+#btn-delete, #btn-admin{
+    background-color: red;
+}
+#btn-delete>a, #btn-admin>a{
+color: white;
+font-size: 18px;
+}
+/* FOOTER */
+h4{
+    font-size: 22px;
+    padding: 0;
+    margin-bottom: 0;
+}
+ .footer-container{
+    display: flex;
+    border: solid 6px black;
+    justify-content: space-around;
+    
+} 
+.footer-links{
+  list-style-type: none;
+  padding: 0;
+} 
+#footer-copyright{
+    text-align: center;
+    font-size: 18px;
+    padding-bottom: 5px;
+}

@@ -3,6 +3,7 @@ namespace myFramework;
 
 class FrontController
 {
+
     private $router;
     public function __construct()
     {
@@ -18,13 +19,27 @@ class FrontController
     // 'home' => nom de la route
     $this->mapRoutes();
     }
-
+  
     public function mapRoutes()
     {
         // MAINCONTROLLER
-        $this->router->map('GET','/','MainController#home', 'home');
-        $this->router->map('GET','/lists','MainController#lists', 'list');
         // $this->router->map('GET','/mentions-legales', 'MainController#mentionsLegales', 'mentions-legales');
+       
+       
+        // PRODUCTCONTROLLER
+        $this->router->map('GET','/','ProductController#home', 'home');
+        $this->router->map('GET','/product/[i:id]','ProductController#getProductById', 'detail-product');
+        // ADMINCONTROLLER
+        //form ajout produit
+        $this->router->map('GET','/form-add','AdminController#formAddProduct', 'form-add-product');
+        // traitement form ajout produit
+        $this->router->map('POST','/add-product','AdminController#addProduct', 'add-product');
+        // back office gestion des produits
+        $this->router->map('GET','/admin','AdminController#getListProducts', 'admin');
+        // form modification d'un produit
+        $this->router->map('GET','/form-update-product/[i:id]','AdminController#formEditProduct', 'form-update-product');
+        $this->router->map('POST','/form-update-product/[i:id]','AdminController#editProduct', 'update-product');
+        $this->router->map('GET','/delete-product/[i:id]','AdminController#deleteProduct', 'delete-product');
 
     }
 
