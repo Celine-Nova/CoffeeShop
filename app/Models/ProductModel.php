@@ -99,7 +99,7 @@ class ProductModel extends CoreModel {
     public static function getListProducts()
     {
         // La requête (à tester dans PMA éventuellement)
-        $sql = "SELECT * FROM product;";
+        $sql = "SELECT * FROM product";
         // Demande à PDO d'éxécuter la requête et de nous retourner le résultat
         $result = DBData::getPDO()->query($sql);
         // On récupère les résultats

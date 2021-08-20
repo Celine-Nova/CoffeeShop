@@ -78,13 +78,14 @@ class DBData {
     $query = 'INSERT INTO product (`title`,`description`,`picture`,`price`,`updated_at`, `created_at`) VALUES(:titleProduct, :descriptionProduct, :pictureProduct, :priceProduct, :updateProduct, :createProduct)';
      
     $statement =$this->dbh->prepare($query);
-
-    $statement->bindValue(':titleProduct', $_POST['title'], \PDO::PARAM_STR);
-    $statement->bindValue(':descriptionProduct', $_POST['description'], \PDO::PARAM_STR);
-    $statement->bindValue(':pictureProduct', $_POST['picture'], \PDO::PARAM_STR);
-    $statement->bindValue(':priceProduct', $_POST['price'], \PDO::PARAM_INT);
-    $statement->bindValue(':updateProduct', Date('yy/m/d'), \PDO::PARAM_STR);
-    $statement->bindValue(':createProduct', Date('yy/m/d'), \PDO::PARAM_STR);
+    if($_POST){
+        $statement->bindValue(':titleProduct', htmlspecialchars($_POST['title']), \PDO::PARAM_STR);
+        $statement->bindValue(':descriptionProduct', $_POST['description'], \PDO::PARAM_STR);
+        $statement->bindValue(':pictureProduct', $_POST['picture'], \PDO::PARAM_STR);
+        $statement->bindValue(':priceProduct', $_POST['price'], \PDO::PARAM_INT);
+        $statement->bindValue(':updateProduct', Date('yy/m/d'), \PDO::PARAM_STR);
+        $statement->bindValue(':createProduct', Date('yy/m/d'), \PDO::PARAM_STR);
+    }
     // var_dump($statement);
     $statement->execute();
     }

@@ -21,6 +21,7 @@
         </form>
         </div>
     <button id="btn-admin"> <a href="<?= $viewVars['router']->generate('admin')?>"> Admin </a></button>
+    <button id="btn-login"> <a href="<?= $viewVars['router']->generate('login')?>"> Login </a></button>
 </div>
 <div id="header-navbar">
     <nav id=navbar>

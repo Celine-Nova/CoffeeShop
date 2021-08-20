@@ -62,7 +62,13 @@ a {
     width: 200px;
     margin: 5px;
     padding: 5px 15px;
+    /* white-space: nowrap;
+    overflow: hidden; */
 }
+/* #description-home{
+    white-space: initial;
+
+} */
 #picture-product{
     max-width: 200px;
     max-height: 200px;
