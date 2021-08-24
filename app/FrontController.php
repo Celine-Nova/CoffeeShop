@@ -40,10 +40,12 @@ class FrontController
         $this->router->map('GET','/form-update-product/[i:id]','AdminController#formEditProduct', 'form-update-product');
         $this->router->map('POST','/form-update-product/[i:id]','AdminController#editProduct', 'update-product');
         $this->router->map('GET','/delete-product/[i:id]','AdminController#deleteProduct', 'delete-product');
+        // AUTHCONTROLLER
         // authentification
         $this->router->map('GET','/login','AuthController#formLogin', 'login');
         $this->router->map('POST','/auth','AuthController#auth', 'auth');
-
+        // Déconnexion
+        $this->router->map('GET','/logout','AuthController#logout', 'logout');
     }
 
     public function run()

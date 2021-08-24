@@ -1,3 +1,9 @@
+<?php
+if(isset($_SESSION['flash_message'])) {
+    echo '<div id="message">'.$_SESSION['flash_message'].'</div>';
+    unset($_SESSION['flash_message']);
+}
+?>
 <form action="auth" method="POST" autocomplete="on">
     <!-- <input type="text" placeholder="Prénom" name="firstName">
     <input type="text"placeholder="Nom" name="name"> -->

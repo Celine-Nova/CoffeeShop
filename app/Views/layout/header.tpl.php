@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,8 +21,13 @@
             <input type="text" placeholder="Je recherche">
         </form>
         </div>
-    <button id="btn-admin"> <a href="<?= $viewVars['router']->generate('admin')?>"> Admin </a></button>
-    <button id="btn-login"> <a href="<?= $viewVars['router']->generate('login')?>"> Login </a></button>
+    <?php if (isset($_SESSION['email']))
+    {?>
+        <button id="btn-admin"> <a href="<?= $viewVars['router']->generate('logout')?>"> DECO </a></button>
+    <?php 
+    }
+    ?>
+        <button id="btn-login"> <a href="<?= $viewVars['router']->generate('login')?>"> Login </a></button>
 </div>
 <div id="header-navbar">
     <nav id=navbar>

@@ -1,4 +1,13 @@
-<h1>Bienvenue sur le Back-Office</h1>
+<?php
+
+// session_start();
+// dump($_SESSION);
+if (isset($_SESSION['email'])) {
+    $currentUserEmail = $_SESSION['email'];
+    // dump($currentUserEmail);
+}
+?>
+<h1>Bienvenue sur le Back-Office <?= $currentUserEmail?> </h1>
 <button> <a href="<?= $viewVars['router']->generate('form-add-product')?>"> Ajout produit </a></button>
 <button> <a href="<?= $viewVars['router']->generate('home')?>"> Retour à l'accueil </a></button>
 <table>

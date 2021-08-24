@@ -1,4 +1,5 @@
 <?php
+session_start();
 // Classes utilisées dans ce fichier
 // Alias plus pratique de le include
 use myFramework\FrontController;
