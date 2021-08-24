@@ -10,8 +10,8 @@ if (isset($_SESSION['email'])) {
 
 ?>
 <h1>Bienvenue sur le Back-Office <?= $currentUserEmail?> </h1>
-<button> <a href="<?= $viewVars['router']->generate('form-add-product')?>"> Ajout produit </a></button>
-<button> <a href="<?= $viewVars['router']->generate('home')?>"> Retour à l'accueil </a></button>
+<button id="btn-add-product"> <a href="<?= $viewVars['router']->generate('form-add-product')?>"> Ajout produit </a></button>
+<button id="btn-home"> <a href="<?= $viewVars['router']->generate('home')?>"> Retour à l'accueil </a></button>
 <table>
       <tr>
           <th class='small-td'>id</th>

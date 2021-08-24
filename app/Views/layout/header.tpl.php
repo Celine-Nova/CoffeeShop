@@ -23,11 +23,16 @@
         </div>
     <?php if (isset($_SESSION['email']))
     {?>
-        <button id="btn-admin"> <a href="<?= $viewVars['router']->generate('logout')?>"> DECO </a></button>
+        <button id="btn-admin"> <a href="<?= $viewVars['router']->generate('logout')?>"> Déconnexion </a></button>
     <?php 
+    }else{?>
+
+        <button id="btn-login"> <a href="<?= $viewVars['router']->generate('login')?>"> Login </a></button>
+    <?php
     }
     ?>
-        <button id="btn-login"> <a href="<?= $viewVars['router']->generate('login')?>"> Login </a></button>
+    
+  
 </div>
 <div id="header-navbar">
     <nav id=navbar>

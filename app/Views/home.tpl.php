@@ -1,4 +1,10 @@
 
+<?php
+if(isset($_SESSION['flash_message'])) {
+    echo '<div id="message">'.$_SESSION['flash_message'].'</div>';
+    unset($_SESSION['flash_message']);
+}
+?>
 <main>
 <h1>Liste des produits </h1>
     <div id="container-product">

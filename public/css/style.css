@@ -114,10 +114,27 @@ a {
     padding: 15px;
 }
 /* ADMIN */
+#btn-add-product{
+    background-color: cornflowerblue;
+    position: absolute;
+    right: 455px;
+    color: white;
+    font-size: 25px;
+    padding: 6px; 
+}
+#btn-add-product>a{
+    color: white;
+    font-size: 25px;
+}
+#btn-home{
+    position: relative;
+    left: 150px;
+    font-size: 22px;
+}
 table{
- 
-  width: 1024px;
-    margin: 0 auto;
+    /* margin: 0 55px; */
+    width: 1024px;
+    margin: 50px auto;
     border-collapse: collapse;
 }
 th, td{

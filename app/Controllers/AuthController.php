@@ -62,6 +62,6 @@ class AuthController extends CoreController {
 
         session_start();
         $_SESSION['flash_message'] = 'Vous avez été correctement déconnecté';
-        header('Location: ' . $_SERVER['BASE_URI'] . '/login');
+        header('Location: ' . $_SERVER['BASE_URI'] . '/');
     }
 }
