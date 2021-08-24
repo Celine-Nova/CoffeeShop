@@ -1,0 +1,19 @@
+{
+    "name": "cocotte/php_answer_response",
+    "description": "projet php",
+    "authors": [
+        {
+            "name": "Celine Darras",
+            "email": "cdarras.co@orange.fr"
+        }
+    ],
+    "require": {
+        "altorouter/altorouter": "^2.0",
+        "symfony/var-dumper": "^5.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "myFramework\\" : "app/"
+        }
+    }
+}
