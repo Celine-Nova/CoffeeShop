@@ -40,18 +40,22 @@ class AuthController extends CoreController {
                 if ($email == $user->getEmail()) {
                     
                     if (password_verify($password, $user->getPassword())) {
-                        echo 'vous etes connecté';
-                    $_SESSION['email'] = $email;
-                    header('Location: ' . $_SERVER['BASE_URI'] . '/admin');
+                        $_SESSION['email'] = $email;
+                        $_SESSION['firstName'] = $user->getFirstName();
+                        $_SESSION['flash_message']  = 'Vous êtes bien connecté';
+                        header('Location: ' . $_SERVER['BASE_URI'] . '/admin');
                     }else{
                         $_SESSION['flash_message']  = 'Identifiant ou mot de passe incorrect';
                         header('Location: ' . $_SERVER['BASE_URI'] . '/login');
                         // echo 'mails et/ou mot de passe incorrect';
                     }
                 }
-        } else{
-        header('Location: ' . $_SERVER['BASE_URI'] . '/login');
+                
+        }else{
+                $_SESSION['flash_message']  = 'Identifiant ou mot de passe incorrect';
+                header('Location: ' . $_SERVER['BASE_URI'] . '/login');
         }
+
     }
     public function logout(){
         // On initialise, pour savoir de quelle session on parle

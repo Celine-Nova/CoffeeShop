@@ -1,3 +1,8 @@
+<?php
+if (empty($_SESSION['email'])) {
+    header('Location: ' . $_SERVER['BASE_URI'] . '/login');
+}
+?>
 <form action="" method="post" id="form-product">
     <div id="input-title" >
         <label class="form-label" for="product" name="title">Titre du produit</label>

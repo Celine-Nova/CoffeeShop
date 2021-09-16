@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,8 +13,8 @@
 <body>
 <header>
 <div id="menu-burger-img">
-    <img id='logo-maxicoffee' src="../public/pictures/maxicoffee.png" alt="logo maxicoffee">
-    <img src="../public/pictures/champion_france_cafe.jpeg" alt="">
+    <a href= "<?= $viewVars['router']->generate('home')?>"><img id='logo-big-bazar' src="../public/pictures/big-bazar.png" alt="logo big bazar"></a>
+    <div id="description">Ce Site est simplement à titre de formation</div>
     <div id="search">
         <form action="">
             <input type="text" placeholder="Je recherche">
@@ -37,11 +36,10 @@
 <div id="header-navbar">
     <nav id=navbar>
         <ul>
-            <li> <a href = ''>Machines à café </a></li>
-            <li><a href = ''>Café grain & Moulu </a></li>
-            <li><a href = ''>Capsules café </a></li>
-            <li><a href = ''>Thé </a></li>
-            <li><a href = ''>Accessoires </a></li>
+            <li><a href = ''>Maison </a></li>
+            <li><a href = ''>Bricolage </a></li>
+            <li><a href = ''>Jardinage </a></li>
+            <li><a href = ''>Vêtements </a></li>
         </ul>
     </nav>
 </div>

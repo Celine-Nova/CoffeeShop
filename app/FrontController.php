@@ -30,20 +30,21 @@ class FrontController
         $this->router->map('GET','/','ProductController#home', 'home');
         $this->router->map('GET','/product/[i:id]','ProductController#getProductById', 'detail-product');
         // ADMINCONTROLLER
-        //form ajout produit
-        $this->router->map('GET','/form-add','AdminController#formAddProduct', 'form-add-product');
-        // traitement form ajout produit
-        $this->router->map('POST','/add-product','AdminController#addProduct', 'add-product');
         // back office gestion des produits
         $this->router->map('GET','/admin','AdminController#getListProducts', 'admin');
+        //form ajout produit
+        $this->router->map('GET','/admin/form-add','AdminController#formAddProduct', 'form-add-product');
+        // traitement form ajout produit
+        $this->router->map('POST','/admin/add-product','AdminController#addProduct', 'add-product');
         // form modification d'un produit
-        $this->router->map('GET','/form-update-product/[i:id]','AdminController#formEditProduct', 'form-update-product');
-        $this->router->map('POST','/form-update-product/[i:id]','AdminController#editProduct', 'update-product');
-        $this->router->map('GET','/delete-product/[i:id]','AdminController#deleteProduct', 'delete-product');
+        $this->router->map('GET','/admin/form-update-product/[i:id]','AdminController#formEditProduct', 'form-update-product');
+        $this->router->map('POST','/admin/form-update-product/[i:id]','AdminController#editProduct', 'update-product');
+        $this->router->map('GET','/admin/delete-product/[i:id]','AdminController#deleteProduct', 'delete-product');
+        
         // AUTHCONTROLLER
         // authentification
         $this->router->map('GET','/login','AuthController#formLogin', 'login');
-        $this->router->map('POST','/auth','AuthController#auth', 'auth');
+        $this->router->map('POST','/login','AuthController#auth', 'auth');
         // Déconnexion
         $this->router->map('GET','/logout','AuthController#logout', 'logout');
     }

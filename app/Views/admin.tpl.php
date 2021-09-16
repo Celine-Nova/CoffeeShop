@@ -1,15 +1,20 @@
 <?php
 
-// session_start();
-// dump($_SESSION);
+
+if(isset($_SESSION['flash_message'])) {
+    echo '<div id="message">'.$_SESSION['flash_message'].'</div>';
+    unset($_SESSION['flash_message']);
+}
+
 if (isset($_SESSION['email'])) {
     $currentUserEmail = $_SESSION['email'];
+    $currentUserFirstName = $_SESSION['firstName'];
 }else{
     header('Location: ' . $_SERVER['BASE_URI'] . '/login');
 }
 
 ?>
-<h1>Bienvenue sur le Back-Office <?= $currentUserEmail?> </h1>
+<h1>Bienvenue sur le Back-Office <?= $currentUserFirstName?> </h1>
 <button id="btn-add-product"> <a href="<?= $viewVars['router']->generate('form-add-product')?>"> Ajout produit </a></button>
 <button id="btn-home"> <a href="<?= $viewVars['router']->generate('home')?>"> Retour à l'accueil </a></button>
 <table>

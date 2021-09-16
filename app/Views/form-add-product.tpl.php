@@ -1,3 +1,8 @@
+<?php
+if (empty($_SESSION['email'])) {
+    header('Location: ' . $_SERVER['BASE_URI'] . '/login');
+}
+?>
 <form action="add-product" method="post" id="form-product">
     <div id="input-title" >
         <label class="form-label" for="product" name="title">Titre du produit</label>
@@ -11,7 +16,7 @@
     </div>
     <div id="input-picture" >
         <label class="form-label" for="product" name="picture">Image</label>
-        <input class="form-input" type="text" name="picture"required> 
+        <input class="form-input" type="text" name="picture"required > 
     </div>
     <div id="input-price"  >
         <label class="form-label" for="product" name="price">Prix</label>
@@ -19,3 +24,4 @@
     </div>
     <input id="input-submit" type="submit" value="Enregistrer">
 </form>
+<?php
